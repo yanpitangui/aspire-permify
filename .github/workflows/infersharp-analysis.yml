@@ -1,0 +1,45 @@
+name: InferSharp
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  analyze:
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ csharp ]
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Cache NuGet Packages
+        uses: actions/cache@v3
+        with:
+          key: nuget-${{ hashFiles('Directory.Packages.props') }}
+          path: ~/.nuget/packages
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3.2.0
+        with:
+          dotnet-version: '8.x'
+
+      - name: Build with dotnet
+        run: dotnet build WebApiBoilerplate.sln --no-incremental
+      
+      - name: Run Infer#
+        uses: microsoft/infersharpaction@v1.5
+        id: runinfersharp
+        with:
+          binary-path: 'src'
+      
+      - name: Upload SARIF output to GitHub Security Center
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: infer-out/report.sarif
