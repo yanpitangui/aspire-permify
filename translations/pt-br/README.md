@@ -19,7 +19,7 @@ O objetivo deste projeto é ser um ponto de partida para a sua WebApi .Net, impl
 ## Execução Independente
 1. Você vai precisar de uma instância do Postgres em execução, com as migrações apropriadas inicializadas.
 - Você pode executar apenas o banco de dados no docker. Para isso, execute o seguinte comando: ``docker-compose up -d db-server``. Fazendo isso, a aplicação poderá chegar ao container do postgres.
-2. Vá para a pasta src/Boilerplate.Api e execute ``dotnet run``, ou, no visual studio, defina o projeto da API como inicialização e execute como console/docker/IIS.
+2. Vá para a pasta src/Permify.Api e execute ``dotnet run``, ou, no visual studio, defina o projeto da API como inicialização e execute como console/docker/IIS.
 3. Visite http://localhost:7122/api-docs ou https://localhost:7123/api-docs para acessar o swagger do aplicativo.
 
 ## Docker
@@ -58,14 +58,14 @@ Para obter mais informações, dê uma olhada na documentação do swagger.
 - CI (Github Actions)
 - Testes Unitários
 - Testes de Integração com testcontainers
-- Suporte a containers com [docker](src/Boilerplate.Api/dockerfile) e [docker-compose](docker-compose.yml)
+- Suporte a containers com [docker](src/Permify.Api/dockerfile) e [docker-compose](docker-compose.yml)
 - Suporte a OpenTelemetry (com OLTP como o exportador padrão)
 - Gerenciamento centralizado de pacotes do NuGet
 
 # Estrutura do Projeto
 1. Services
 	- Esta pasta guarda suas apis e qualquer projeto que envie dados aos seus usuários.
-	1. Boilerplate.Api
+	1. Permify.Api
 		- Este é o projeto principal. Aqui estão todos os controllers e inicialização para a api que será utilizada.
 	2. docker-compose
 		- Este projeto existe para permitir que você execute o docker-compose com o Visual Studio. Ele contém uma referência para o arquivo docker-compose e irá construir todas as dependências do projeto e executar.
@@ -73,11 +73,11 @@ Para obter mais informações, dê uma olhada na documentação do swagger.
 	- Esta pasta guarda todas as transformações de dados entre sua api e sua camada de domínio. Ela também contém lógica de negócio.
 3. Domain
 	- Esta pasta contém seus modelos de negócio, enums e interfaces comuns.
-	1. Boilerplate.Domain
+	1. Permify.Domain
 		- Contém modelos de negócio e enums.
 4. Infra
 	- Esta pasta contém todas as configurações de acesso à dados, contexto de banco de dados, tudo o que se conecta com dados externos.
-	1. Boilerplate.Infrastructure
+	1. Permify.Infrastructure
 		- Este projeto contém o dbcontext, configurações das entidades do banco e migrations.
 
 
@@ -91,8 +91,8 @@ Para obter mais informações, dê uma olhada na documentação do swagger.
 Para executar migrações neste projeto, você precisa da ferramenta dotnet-ef.
 - Execute ``dotnet tool install --global dotnet-ef``
 - Agora, dependendo do seu sistema operacional, você tem comandos diferentes:
-	1. Para Windows: ``dotnet ef migrações add InitialCreate --startup-project .\src\Boilerplate.Api\ --project .\src\Boilerplate.Infrastructure\``
-	2. Para linux/mac: ``dotnet ef migrações add InitialCreate --startup-project ./src/Boilerplate.Api/ --project ./src/Boilerplate.Infrastructure/``
+	1. Para Windows: ``dotnet ef migrações add InitialCreate --startup-project .\src\Permify.Api\ --project .\src\Permify.Infrastructure\``
+	2. Para linux/mac: ``dotnet ef migrações add InitialCreate --startup-project ./src/Permify.Api/ --project ./src/Permify.Infrastructure/``
 
 # Caso tenha gostado deste repositório, dê uma estrela!
 Se este template foi útil para você ou se você aprendeu algo, por favor dê uma estrela! :star:

@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!--    add your PackageVersion nodes here -->
+    <PackageVersion Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2"/>
     <PackageVersion Include="Ardalis.Result" Version="7.2.0" />
     <PackageVersion Include="Ardalis.Result.AspNetCore" Version="7.2.0" />
     <PackageVersion Include="Ardalis.Result.FluentValidation" Version="7.2.0" />
@@ -13,8 +14,14 @@
     <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
     <PackageVersion Include="NewId" Version="4.0.1" />
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.6.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.5.1-beta.1" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="8.0.0"/>
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="8.0.0-preview.1.23557.2"/>
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.7.0-alpha.1"/>
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0-alpha.1"/>
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.6.0-beta.2"/>
+    <PackageVersion Include="OpenTelemetry.Instrumentation.GrpcNetClient" Version="1.6.0-beta.2"/>
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.6.0-beta.2"/>
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.5.1"/>
     <PackageVersion Include="StronglyTypedId" Version="1.0.0-beta06" />
     <PackageVersion Include="FluentValidation" Version="11.8.1" />
     <PackageVersion Include="MediatR" Version="12.2.0" />

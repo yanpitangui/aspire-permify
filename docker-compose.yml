@@ -21,7 +21,7 @@ services:
   boilerplate-api:
     build:
       context: .
-      dockerfile: src/Boilerplate.Api/Dockerfile
+      dockerfile: src/Permify.Api/Dockerfile
     image: boilerplate-api:local
     container_name: boilerplate-api
     depends_on:

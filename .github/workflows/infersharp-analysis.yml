@@ -31,7 +31,7 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build WebApiBoilerplate.sln --no-incremental
+        run: dotnet build Permify.sln --no-incremental
       
       - name: Run Infer#
         uses: microsoft/infersharpaction@v1.5

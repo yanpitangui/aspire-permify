@@ -1,4 +1,4 @@
-# dotnet-api-boilerplate
+# Aspire-Permify
 <p align="center">
   <span>English</span> |
   <a href="https://github.com/yanpitangui/dotnet-api-boilerplate/tree/main/translations/pt-br/README.md">Português</a>
@@ -20,7 +20,7 @@ and technologies for a restful API in .net, making your work easier.
 ## Standalone
 1. You may need a running instance of Postgres, with appropriate migrations initialized.
 	- You can run just the DB on docker. For that, run the following command: ``docker-compose up -d db-server``. Doing that, the application will be able to reach the container of the db server.
-2. Go to the src/Boilerplate.Api folder and run ``dotnet run``, or, in visual studio set the api project as startup and run as console/docker/IIS.
+2. Go to the src/Permify.Api folder and run ``dotnet run``, or, in visual studio set the api project as startup and run as console/docker/IIS.
 3. Visit http://localhost:7122/api-docs or https://localhost:7123/api-docs to access the application's swagger.
 
 ## Docker
@@ -61,14 +61,14 @@ For more information, please take a look on swagger documentation.
 - Authorization
 - Unit tests
 - Integration tests with testcontainers
-- Container support with [docker](src/Boilerplate.Api/dockerfile) and [docker-compose](docker-compose.yml)
+- Container support with [docker](src/Permify.Api/dockerfile) and [docker-compose](docker-compose.yml)
 - OpenTelemetry support (with OLTP as default exporter)
 - NuGet Central package management (CPM)
 
 # Project Structure
 1. Services
 	- This folder stores your apis and any project that sends data to your users.
-	1. Boilerplate.Api
+	1. Permify.Api
 		- This is the main api project. Here are all the controllers and initialization for the api that will be used.
 	2. docker-compose
 		- This project exists to allow you to run docker-compose with Visual Studio. It contains a reference to the docker-compose file and will build all the projects dependencies and run it.
@@ -78,13 +78,13 @@ For more information, please take a look on swagger documentation.
 		- This folder contains the login Session implementation.
 3. Domain
 	- This folder contains your business models, enums and common interfaces.
-	1. Boilerplate.Domain
+	1. Permify.Domain
 		- Contains business models and enums.
 		1. Auth
 			- This folder contains the login Session Interface.
 4. Infra
 	- This folder contains all data access configuration, database contexts, anything that reaches for outside data.
-	1. Boilerplate.Infrastructure
+	1. Permify.Infrastructure
 		- This project contains the dbcontext, entities configuration and migrations.
 
 
@@ -98,8 +98,8 @@ For more information, please take a look on swagger documentation.
 To run migrations on this project, you need the dotnet-ef tool.
 - Run ``dotnet tool install --global dotnet-ef``
 - Now, depending on your OS, you have different commands:
-    1. For windows: ``dotnet ef migrations add InitialCreate --startup-project .\src\Boilerplate.Api\ --project .\src\Boilerplate.Infrastructure\``
-    2. For linux/mac: ``dotnet ef migrations add InitialCreate --startup-project ./src/Boilerplate.Api/ --project ./src/Boilerplate.Infrastructure/``
+    1. For windows: ``dotnet ef migrations add InitialCreate --startup-project .\src\Permify.Api\ --project .\src\Permify.Infrastructure\``
+    2. For linux/mac: ``dotnet ef migrations add InitialCreate --startup-project ./src/Permify.Api/ --project ./src/Permify.Infrastructure/``
 # If you like it, give it a Star
 If this template was useful for you, or if you learned something, please give it a Star! :star:
 
