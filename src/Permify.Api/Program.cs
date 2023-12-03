@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.AddServiceDefaults();
 // Controllers
 builder.AddValidationSetup();
 
@@ -20,7 +22,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddSwaggerSetup();
 
 // Persistence
-builder.Services.AddPersistenceSetup(builder.Configuration);
+builder.AddPersistenceSetup();
 
 // Application layer setup
 builder.Services.AddApplicationSetup();

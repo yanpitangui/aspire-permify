@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.Result.AspNetCore" />
+    <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageReference Include="Ben.Demystifier" />
     <PackageReference Include="FluentValidation.AspNetCore" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
@@ -45,6 +46,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Permify.Application\Permify.Application.csproj" />
+    <ProjectReference Include="..\Permify.Aspire\Permify.Aspire.ServiceDefaults\Permify.Aspire.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Permify.Domain\Permify.Domain.csproj" />
     <ProjectReference Include="..\Permify.Infrastructure\Permify.Infrastructure.csproj" />
   </ItemGroup>

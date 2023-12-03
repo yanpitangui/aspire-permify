@@ -56,6 +56,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{16C3D5B3-4
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permify.Aspire.AppHost", "src\Permify.Aspire\Permify.Aspire.AppHost\Permify.Aspire.AppHost.csproj", "{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permify.Aspire.ServiceDefaults", "src\Permify.Aspire\Permify.Aspire.ServiceDefaults\Permify.Aspire.ServiceDefaults.csproj", "{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +94,14 @@ Global
 		{7873047B-1B2D-40D8-AEBE-587D2E3C201B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7873047B-1B2D-40D8-AEBE-587D2E3C201B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7873047B-1B2D-40D8-AEBE-587D2E3C201B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +122,8 @@ Global
 		{4BE8D923-E856-40F3-9AB6-4DA4B760F24F} = {346415FF-9233-459C-AE00-06ACFE985BC1}
 		{B9AA6117-3A61-4E16-9281-D4C4A9B5253F} = {346415FF-9233-459C-AE00-06ACFE985BC1}
 		{16C3D5B3-4A1C-48B3-979F-29400BB2ECE7} = {346415FF-9233-459C-AE00-06ACFE985BC1}
+		{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45} = {C7816907-144D-4EB4-B645-3E7E03BD4835}
+		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE} = {C7816907-144D-4EB4-B645-3E7E03BD4835}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {541B563F-712B-4BF0-851D-756E0B417E4C}
