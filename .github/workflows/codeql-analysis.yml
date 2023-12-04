@@ -28,7 +28,9 @@ jobs:
         uses: actions/setup-dotnet@v3.2.0
         with:
           dotnet-version: '8.x'
-          
+      - name: Install dotnet aspire
+        run: |
+          dotnet workload restore          
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
 

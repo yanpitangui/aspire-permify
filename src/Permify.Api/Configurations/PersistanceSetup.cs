@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using EntityFramework.Exceptions.PostgreSQL;
+using Microsoft.AspNetCore.Builder;
 using Permify.Application.Auth;
 using Permify.Domain.Auth.Interfaces;
 using Permify.Infrastructure;
@@ -14,7 +15,10 @@ public static class PersistanceSetup
     {
 
         builder.Services.AddScoped<ISession, Session>();
-        builder.AddNpgsqlDbContext<ApplicationDbContext>("postgres");
+        builder.AddNpgsqlDbContext<ApplicationDbContext>("postgres", configureDbContextOptions: db =>
+        {
+            db.UseExceptionProcessor();
+        });
 
     }
 }

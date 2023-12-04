@@ -37,7 +37,9 @@ jobs:
       - name: Install dotnet-coverage
         run: |
           dotnet tool install --global dotnet-coverage
-          
+      - name: Install dotnet aspire
+        run: |
+          dotnet workload restore        
       - name: Cache NuGet Packages
         uses: actions/cache@v3
         with:
