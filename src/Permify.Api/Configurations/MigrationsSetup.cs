@@ -17,7 +17,7 @@ public static class MigrationsSetup
 
         logger.LogInformation("Running migrations...");
         var strategy = dbContext.Database.CreateExecutionStrategy();
-        await strategy.ExecuteAsync(() => dbContext.Database.MigrateAsync());
+        await strategy.ExecuteAsync(async () => await dbContext.Database.MigrateAsync());
         logger.LogInformation("Migrations applied succesfully");
     }
 }

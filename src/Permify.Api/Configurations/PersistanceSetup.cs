@@ -15,7 +15,7 @@ public static class PersistanceSetup
     {
 
         builder.Services.AddScoped<ISession, Session>();
-        builder.AddNpgsqlDbContext<ApplicationDbContext>("postgres", configureDbContextOptions: db =>
+        builder.AddNpgsqlDbContext<ApplicationDbContext>("aspire-permify", configureDbContextOptions: db =>
         {
             db.UseExceptionProcessor();
         });
