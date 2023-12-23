@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +28,7 @@ builder.AddPersistenceSetup();
 // Application layer setup
 builder.Services.AddApplicationSetup();
 
-builder.Services.AddGrpcClient<Base.V1.Permission.PermissionClient>();
+builder.Services.AddPermifySetup();
 
 // Add identity stuff
 builder.Services
@@ -80,6 +81,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapHeroEndpoints();
+app.MapPermissionEndpoints();   
 app.MapGroup("api/identity")
     .WithTags("Identity")
     .MapIdentityApi<ApplicationUser>();

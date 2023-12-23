@@ -37,6 +37,7 @@ public static class OpenTelemetrySetup
                 {
                     o.RecordException = true;
                 })
+                .AddGrpcClientInstrumentation()
                 .AddOtlpExporter();
         })
             .WithMetrics(telemetry =>
