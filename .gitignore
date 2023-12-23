@@ -363,3 +363,5 @@ tools/
 .idea/
 
 .DS_Store
+
+**/generated/*

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permify.Domain", "src\Permi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permify.Application", "src\Permify.Application\Permify.Application.csproj", "{5857A73F-30C2-4916-AC97-199F19D744AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permify.Infrastructure", "src\Permify.Infrastructure\Permify.Infrastructure.csproj", "{8ADAF360-AFE1-46E0-BFB9-A8EC87133CB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permify.Persistence", "src\Permify.Persistence\Permify.Persistence.csproj", "{8ADAF360-AFE1-46E0-BFB9-A8EC87133CB0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{C7816907-144D-4EB4-B645-3E7E03BD4835}"
 EndProject
@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Appl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{8FB31CA6-BF37-45DA-B09C-24DE15037E0C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Persistence", "4 - Persistence", "{0EBA756A-3E01-49F4-A192-C8B805685C21}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{0EBA756A-3E01-49F4-A192-C8B805685C21}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Permify.Api.UnitTests", "tests\Permify.Api.UnitTests\Permify.Api.UnitTests.csproj", "{B5DE98B8-8DC7-4A0E-B396-654DF67E3BFF}"
 EndProject
@@ -57,6 +57,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permify.Aspire.AppHost", "src\Permify.Aspire\Permify.Aspire.AppHost\Permify.Aspire.AppHost.csproj", "{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permify.Aspire.ServiceDefaults", "src\Permify.Aspire\Permify.Aspire.ServiceDefaults\Permify.Aspire.ServiceDefaults.csproj", "{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Permify.Grpc", "src\Permify.Grpc\Permify.Grpc.csproj", "{C3592A62-A0B8-48ED-90AB-D3F69390CDAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +98,10 @@ Global
 		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3592A62-A0B8-48ED-90AB-D3F69390CDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3592A62-A0B8-48ED-90AB-D3F69390CDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3592A62-A0B8-48ED-90AB-D3F69390CDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3592A62-A0B8-48ED-90AB-D3F69390CDAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +123,7 @@ Global
 		{16C3D5B3-4A1C-48B3-979F-29400BB2ECE7} = {346415FF-9233-459C-AE00-06ACFE985BC1}
 		{B70DD2F6-8DB3-4244-AD16-8B765BEA3C45} = {C7816907-144D-4EB4-B645-3E7E03BD4835}
 		{BDD8E4F9-E561-421A-A1EF-01AACA1596DE} = {C7816907-144D-4EB4-B645-3E7E03BD4835}
+		{C3592A62-A0B8-48ED-90AB-D3F69390CDAD} = {0EBA756A-3E01-49F4-A192-C8B805685C21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {541B563F-712B-4BF0-851D-756E0B417E4C}

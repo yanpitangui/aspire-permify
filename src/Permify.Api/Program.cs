@@ -27,6 +27,8 @@ builder.AddPersistenceSetup();
 // Application layer setup
 builder.Services.AddApplicationSetup();
 
+builder.Services.AddGrpcClient<Base.V1.Permission.PermissionClient>();
+
 // Add identity stuff
 builder.Services
     .AddIdentityApiEndpoints<ApplicationUser>()

@@ -25,6 +25,7 @@
     <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
     <PackageReference Include="Ben.Demystifier" />
     <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="Grpc.AspNetCore" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -48,7 +49,8 @@
     <ProjectReference Include="..\Permify.Application\Permify.Application.csproj" />
     <ProjectReference Include="..\Permify.Aspire\Permify.Aspire.ServiceDefaults\Permify.Aspire.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Permify.Domain\Permify.Domain.csproj" />
-    <ProjectReference Include="..\Permify.Infrastructure\Permify.Infrastructure.csproj" />
+    <ProjectReference Include="..\Permify.Grpc\Permify.Grpc.csproj" />
+    <ProjectReference Include="..\Permify.Persistence\Permify.Persistence.csproj" />
   </ItemGroup>
 
 
