@@ -27,13 +27,12 @@ var permify = builder.AddContainer("permify", "permify/permify", "latest")
     // Aspire dashboard otlp only works with grpc endpoints, so we use the collector to send the metrics to the dashboard
     .WithEnvironment("PERMIFY_METER_ENDPOINT", "host.docker.internal:4318")
     .WithEnvironment("PERMIFY_METER_INSECURE", "true")
-    // .WithEnvironment("PERMIFY_DATABASE_ENGINE", "postgres")
-    // .WithEnvironment("PERMIFY_DATABASE_AUTO_MIGRATE", "true")
-    // .WithEnvironment("PERMIFY_DATABASE_AUTO_MIGRATE", "true")
-    // .WithEnvironment("PERMIFY_DATABASE_URI", () =>
-    // {
-    //     return $"postgres://{postgresdb.Resource.Parent.Name}:localdev@localhost:5432/aspire-permify";
-    // })
+    .WithEnvironment("PERMIFY_DATABASE_ENGINE", "postgres")
+    .WithEnvironment("PERMIFY_DATABASE_AUTO_MIGRATE", "true")
+    .WithEnvironment("PERMIFY_DATABASE_URI", () =>
+    {
+        return $"postgres://{postgresdb.Resource.Parent.Name}:localdev@host.docker.internal:5432/aspire-permify";
+    })
     .WithServiceBinding(3478, 3478, name: "permifyGrpc");
 
 
