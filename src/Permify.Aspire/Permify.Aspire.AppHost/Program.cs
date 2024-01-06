@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Configuration;
-using System.Text;
 
 var builder = DistributedApplication.CreateBuilder(args);
 

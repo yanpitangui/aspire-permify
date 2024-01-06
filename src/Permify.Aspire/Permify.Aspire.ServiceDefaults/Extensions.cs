@@ -2,10 +2,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.Extensions.Logging;
-using OpenTelemetry.Logs;
-using OpenTelemetry.Metrics;
-using OpenTelemetry.Trace;
 
 namespace Microsoft.Extensions.Hosting;
 
@@ -28,28 +24,7 @@ public static class Extensions
 
         return builder;
     }
-
-    private static IHostApplicationBuilder AddOpenTelemetryExporters(this IHostApplicationBuilder builder)
-    {
-        var useOtlpExporter = !string.IsNullOrWhiteSpace(builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"]);
-
-        if (useOtlpExporter)
-        {
-            builder.Services.Configure<OpenTelemetryLoggerOptions>(logging => logging.AddOtlpExporter());
-            builder.Services.ConfigureOpenTelemetryMeterProvider(metrics => metrics.AddOtlpExporter());
-            builder.Services.ConfigureOpenTelemetryTracerProvider(tracing => tracing.AddOtlpExporter());
-        }
-
-        // Uncomment the following lines to enable the Prometheus exporter (requires the OpenTelemetry.Exporter.Prometheus.AspNetCore package)
-        // builder.Services.AddOpenTelemetry()
-        //    .WithMetrics(metrics => metrics.AddPrometheusExporter());
-
-        // Uncomment the following lines to enable the Azure Monitor exporter (requires the Azure.Monitor.OpenTelemetry.Exporter package)
-        // builder.Services.AddOpenTelemetry()
-        //    .UseAzureMonitor();
-
-        return builder;
-    }
+    
 
     public static IHostApplicationBuilder AddDefaultHealthChecks(this IHostApplicationBuilder builder)
     {
@@ -73,10 +48,4 @@ public static class Extensions
 
         return app;
     }
-
-    private static MeterProviderBuilder AddBuiltInMeters(this MeterProviderBuilder meterProviderBuilder) =>
-        meterProviderBuilder.AddMeter(
-            "Microsoft.AspNetCore.Hosting",
-            "Microsoft.AspNetCore.Server.Kestrel",
-            "System.Net.Http");
 }

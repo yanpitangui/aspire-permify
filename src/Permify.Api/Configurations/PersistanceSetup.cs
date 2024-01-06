@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Builder;
 using Permify.Application.Auth;
 using Permify.Domain.Auth.Interfaces;
 using Permify.Infrastructure;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 

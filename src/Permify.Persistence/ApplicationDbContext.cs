@@ -1,7 +1,6 @@
 ﻿using Permify.Application.Common;
 using Permify.Domain.Entities;
 using Permify.Infrastructure.Configuration;
-using EntityFramework.Exceptions.PostgreSQL;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;

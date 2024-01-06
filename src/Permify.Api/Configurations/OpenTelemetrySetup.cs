@@ -1,12 +1,10 @@
 ﻿using Permify.Application.Extensions;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OpenTelemetry;
+using Npgsql;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
-using System;
 using System.Diagnostics;
 
 namespace Permify.Api.Configurations;
@@ -37,6 +35,7 @@ public static class OpenTelemetrySetup
                 {
                     o.RecordException = true;
                 })
+                .AddNpgsql()
                 .AddGrpcClientInstrumentation()
                 .AddOtlpExporter();
         })
