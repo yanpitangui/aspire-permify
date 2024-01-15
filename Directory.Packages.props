@@ -12,7 +12,7 @@
     <PackageVersion Include="Aspire.Npgsql" Version="8.0.0-preview.2.23619.3" />
     <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-preview.2.23619.3" />
     <PackageVersion Include="EntityFrameworkCore.Exceptions.PostgreSQL" Version="8.0.0" />
-    <PackageVersion Include="Google.Protobuf" Version="3.25.1" />
+    <PackageVersion Include="Google.Protobuf" Version="3.25.2" />
     <PackageVersion Include="Grpc.Net.Client" Version="2.59.0" />
     <PackageVersion Include="Grpc.Net.ClientFactory" Version="2.59.0" />
     <PackageVersion Include="Grpc.Tools" Version="2.60.0" />
