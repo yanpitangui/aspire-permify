@@ -45,7 +45,7 @@ jobs:
         run: |
           dotnet workload restore        
       - name: Cache NuGet Packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: nuget-${{ hashFiles('Directory.Packages.props') }}
           path: ~/.nuget/packages
