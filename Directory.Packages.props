@@ -10,7 +10,7 @@
     <PackageVersion Include="Ardalis.Result.AspNetCore" Version="7.2.0" />
     <PackageVersion Include="Ardalis.Result.FluentValidation" Version="7.2.0" />
     <PackageVersion Include="Aspire.Npgsql" Version="8.0.0-preview.2.23619.3" />
-    <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-preview.2.23619.3" />
+    <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-preview.3.24105.21" />
     <PackageVersion Include="EntityFrameworkCore.Exceptions.PostgreSQL" Version="8.0.0" />
     <PackageVersion Include="Google.Protobuf" Version="3.25.2" />
     <PackageVersion Include="Grpc.Net.Client" Version="2.60.0" />
